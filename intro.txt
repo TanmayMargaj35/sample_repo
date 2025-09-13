@@ -1,0 +1,127 @@
+https://github.com/DevTown-Bootcamps/FSWDT-20725-github.git
+
+1
+Git:It is a tool that helps to track changes, and manage your code bases.
+
+Github:Cloud based repository keeper.Also service like contribution,version controls, and others.
+
+
+2 Github architecture:
+ working directory:where your code are live.If you make any changes in this part then 
+ it does not gets added to github.
+
+ staging area:A middle ground where you prepare your codes for chnages.
+
+ commit:Parmanent record of the project
+
+working directory->staging area->commit(save the code).
+
+example:
+  A->added changes->store these changes as permanent changes.
+
+  local code(local storage)->github
+
+
+3 Git setup:
+  git config --global user.name "Your Name"
+  git config --global user.email "your@email.com"
+
+4 Basic git operations: 
+
+   i) git init: Intialize a repo with git.
+   ii)git status: Show all the changes in the working directory.
+   iii)git add . :Stage all the modified changes.
+   iv) git commit -m "message" : create a new commit with a message given to it.
+   v) git push: add the chnages from staging to github.
+   vi) git push -u main: sets the main branch upstream for code push.
+
+5 Branches:
+      D1
+  A  
+      D2
+
+      same file-two developers- two different changes
+      f1-D1,D2 made changes.
+
+
+      b1: f1: D1 functionality for login-D1
+
+      b2: f1: D2 functionality for login-D2
+
+      b1 branch +D1 has added new file F2.
+      b2 branch will not have file f2.  
+
+      i) creating branch through github:
+         git fetch origin: to pull all new created branches from github.
+         git checkout <branchname>: to switch between branches.
+      
+      ii) Creating branches through local system and pushing to github.
+          git branch <branch-name>: to create a branch locally.
+          git push --all origin: to push the newly created branch from the local system to github.
+
+Questions:
+
+ 1. What command initializes a new Git repository in your project folder?
+a) git start
+b) git init
+c) git create
+d) git new
+Answer: b) git init
+________________________________________
+2. Which command stages all files in your project for a commit?
+a) git commit -a
+b) git push
+c) git add .
+d) git stage all
+Answer: c) git add .
+________________________________________
+3. What is the correct command to save changes to the local repository with a message?
+a) git save "message"
+b) git update -m "message"
+c) git commit -m "message"
+d) git push -m "message"
+Answer: c) git commit -m "message"
+
+4. Which command is used to create a new branch in Git?
+a) git create branch <branch-name>
+b) git new <branch-name>
+c) git branch <branch-name>
+d) git checkout <branch-name>
+Answer: c) git branch <branch-name>
+________________________________________
+5. How do you switch to an existing branch named feature?
+a) git switch feature
+b) git move feature
+c) git checkout feature
+d) git branch feature
+Answer: c) git checkout feature
+________________________________________
+
+6 Pull request:
+   branch A(code 1)->pull request   branch B(code 2)
+
+   pulling code from branch A to branch B.
+
+   creating a pull request
+   adding comments to pull request
+   closing a pull request
+   merging a pull request.
+
+7 Forking: repo A(not a owner)
+   To create a local copy(not on your system but on your github) of the repo.
+
+
+   # Add the original repo as 'upstream'
+    git remote add upstream https://github.com/original-owner/original-repo.git
+    
+    # Fetch latest changes from upstream
+    git fetch upstream
+    
+    # Merge upstream/main into your local main
+    git merge upstream/main
+    
+    # OR if you want a faster update (optional safer method)
+    # git pull upstream main
+
+8 Clone:creating a copy of the repo on your own local system.
+   git clone <repo_https_link>
