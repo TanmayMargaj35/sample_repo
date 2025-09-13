@@ -1,0 +1,52 @@
+GIT & GITHUB STEP-BY-STEP GUIDE
+
+PART 1 → CREATE A REPO ON GITHUB
+1. Go to https://github.com and log in.
+2. Click the "+" (top-right) → "New repository".
+3. Give it a name (example: my-first-repo).
+4. Choose Public or Private.
+5. Check "Add a README file" (optional but recommended).
+6. Click "Create repository".
+
+PART 2 → PUSH FILES FROM VS CODE USING GIT COMMANDS
+1. Open VS Code and go to your project folder.
+2. Initialize Git: 
+   git init
+3. Connect your local repo to GitHub remote: 
+   git remote add origin <repo_url>
+4. Check status: 
+   git status
+5. Stage files: 
+   git add .
+6. Commit changes: 
+   git commit -m "Initial commit"
+7. Push to GitHub: 
+   git branch -M main
+   git push -u origin main
+
+PART 3 → BRANCHING, PUSH, PULL, MERGE, CLONE, FORK
+
+BRANCHING
+- Create new branch: git checkout -b feature-branch
+- Switch branch: git checkout main
+- Push branch to GitHub: git push -u origin feature-branch
+
+PULL
+- Get latest changes from remote: git pull
+
+MERGE
+- Switch to main: git checkout main
+- Merge branch: git merge feature-branch
+- Push merged code: git push origin main
+
+CLONE
+- Download a remote repo: git clone <repo_url>
+
+FORK
+- Copy someone else's repo to your GitHub account (on GitHub website).
+- Then clone your fork locally using git clone.
+
+PULL REQUEST
+- After pushing your branch, go to GitHub → Click "Compare & Pull Request".
+- Add description → Click "Create Pull Request".
+- Merge PR → Your branch is merged into main.
