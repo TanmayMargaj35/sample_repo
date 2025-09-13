@@ -126,3 +126,4 @@ ________________________________________
 8 Clone:creating a copy of the repo on your own local system.
    git clone <repo_https_link>
 9 Always keep the git commmands and steps in mind.
+10. keep the note of the branching pull and clone concept.
